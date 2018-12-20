@@ -1,11 +1,10 @@
----
 - name: Apache | Install packages
   yum:
     name: httpd
     state: present
   notify:
     - start-httpd
-    
+
 - name: Apache | Configure /etc/httpd/httpd.conf
   template:
     src: httpd.conf.j2
